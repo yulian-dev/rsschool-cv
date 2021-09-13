@@ -1,0 +1,164 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100 !important;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+.header, .contacts, .experience, .about, .studying, .footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* HEADER ====================================================== */
+
+.header .header-inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header .header-inner .header-avatar {
+    background: rgba(234, 234, 234, 0.8);
+}
+
+.header .header-inner .header-avatar img {
+    border-radius: 50%;
+    padding: 2em;
+}
+
+.header .header-inner .header-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header-inner .header-name h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+}
+
+.header .header-inner .header-name h1 span {
+    color: rgb(148, 122, 112);
+}
+
+/* CONTACTS ====================================================== */
+
+.contacts .contacts-items,
+.footer .footer-items {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(148, 122, 112, 0.3);
+    border-bottom-color: rgba(148, 122, 112, 0.3);
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.contacts .contacts-inner ul {
+    height: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.contacts .contacts-inner ul li {
+    display: inline;
+}
+
+.contacts .contacts-inner ul li a,
+.footer .footer-inner ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.contacts .contacts-inner ul li a:hover,
+.footer .footer-inner ul li a:hover {
+    color: rgb(148, 122, 112);
+    transition: 0.2s color linear;
+}
+
+/* ABOUT ====================================================== */
+
+.about .about-inner .about-profile p {
+    padding-top: 0.5em;
+}
+
+/* SKILLS & WORK =============================================== */
+
+.experience .experience-inner,
+.about .about-inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.experience .experience-inner .experience-skills,
+.about .about-inner .about-languages,
+.studying .studying-inner .studying-education {
+    padding: 2em 2em 0 2em;
+    background: rgba(234, 234, 234, 0.8);
+}
+
+.experience .experience-inner .experience-skills h4,
+.experience .experience-inner .experience-work h4,
+.about .about-inner .about-languages h4,
+.about .about-inner .about-profile h4,
+.studying .studying-inner .studying-education h4,
+.studying .studying-inner .studying-code h4{
+    border-bottom-style: solid;
+    border-bottom-color: rgba(148, 122, 112, 0.6);
+    border-bottom-width: 2px;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+}
+
+.experience .experience-inner .experience-skills ul li,
+.about .about-inner .about-languages ul li,
+.studying .studying-inner .studying-education ul li {
+    font-weight: 300;
+    padding-top: 0.5em;
+}
+
+.experience .experience-inner .experience-work,
+.about .about-inner .about-profile,
+.studying .studying-inner .studying-code {
+    padding: 2em 2em 0 2em;
+}
+
+.experience .experience-inner .experience-work a,
+.studying .studying-inner .studying-education a {
+    text-decoration: none;
+    color: rgb(148, 122, 112);
+    font-weight: bold;
+}
+
+.experience .experience-inner .experience-work a:hover {
+    color: rgba(148, 122, 112, 0.7);
+    transition: 0.2s color linear;
+}
+
+.experience .experience-inner .experience-work ul li {
+    font-weight: 300;
+    padding-top: 0.5em;
+}
+
+/* EDUCATION & CODE =============================================== */
+
+.studying .studying-inner .studying-code pre code {
+    background-color: rgba(234, 234, 234, 0.8);
+    border: 1px solid rgba(148, 122, 112, 0.2);
+    display: block;
+    padding: 0 2em;
+}
+
+/* FOOTER ====================================================== */
+
+.footer .footer-inner ul {
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
