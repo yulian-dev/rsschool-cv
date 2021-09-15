@@ -12,6 +12,108 @@ p {
     margin: 0 auto;
 }
 
+/* BURGER MENU ================================================= */
+
+#menu__toggle {
+    opacity: 0;
+}
+
+.menu__btn {
+    display: none;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 10%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #616161;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    transition-duration: .25s;
+}
+
+.menu__box {
+    transition-duration: .25s;
+}
+
+.menu__item {
+    transition-duration: .25s;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 60px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgba(234, 234, 234, 0.95);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.menu__box a:hover {
+    color: rgb(148, 122, 112);
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.menu__item:hover {
+    background-color: #ffffff;
+}
+
 /* HEADER ====================================================== */
 
 .header .header-inner {
@@ -65,7 +167,9 @@ p {
 }
 
 .contacts .contacts-inner ul li {
-    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contacts .contacts-inner ul li a,
@@ -78,6 +182,11 @@ p {
 .footer .footer-inner ul li a:hover {
     color: rgb(148, 122, 112);
     transition: 0.2s color linear;
+}
+
+.contacts .contacts-inner ul li a i {
+    display: none;
+    color: rgba(148, 122, 112, 0.8);
 }
 
 /* ABOUT ====================================================== */
@@ -106,7 +215,7 @@ p {
 .about .about-inner .about-languages h4,
 .about .about-inner .about-profile h4,
 .studying .studying-inner .studying-education h4,
-.studying .studying-inner .studying-code h4{
+.studying .studying-inner .studying-code h4 {
     border-bottom-style: solid;
     border-bottom-color: rgba(148, 122, 112, 0.6);
     border-bottom-width: 2px;
@@ -146,14 +255,18 @@ p {
 
 /* EDUCATION & CODE =============================================== */
 
+.studying .studying-inner .studying-code pre {
+    margin-left: -170px;
+}
+
 .studying .studying-inner .studying-code pre code {
     background-color: rgba(234, 234, 234, 0.8);
     border: 1px solid rgba(148, 122, 112, 0.2);
-    display: block;
+    display: inline-block;
     padding: 0 2em;
 }
 
-/* FOOTER ====================================================== */
+/* FOOTER ======================================================== */
 
 .footer .footer-inner ul {
     height: 2em;
@@ -161,4 +274,84 @@ p {
     justify-content: space-between;
     align-items: center;
     margin-top: 1em;
+}
+
+/* MEDIA ======================================================== */
+
+@media screen and (max-width: 1142px) {
+    .header .header-inner .header-name h1 {
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header .header-inner .header-name h1 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .contacts .contacts-inner ul {
+        padding-left: 0;
+    }
+
+    .contacts .contacts-inner ul li a {
+        font-size: 0.8rem;
+    }
+
+    .experience .experience-inner .experience-skills,
+    .about .about-inner .about-languages,
+    .studying .studying-inner .studying-education {
+        padding: 2em 1em 0 1em;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .menu__btn {
+        display: flex;
+    }
+
+    .header .header-inner .header-avatar img {
+        padding: 1em;
+    }
+
+    .header .header-inner .header-name h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .header .header-inner .header-name h5 {
+        font-size: 1rem;
+    }
+
+    .contacts .contacts-inner ul li {
+        padding: 0 1em;
+    }
+
+    .contacts .contacts-inner ul li a span {
+        display: none;
+    }
+
+    .contacts .contacts-inner ul li a i {
+        display: block;
+        color: rgba(148, 122, 112, 0.8);
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .header .header-inner .header-name h1 {
+        margin-top: 0.5em;
+        font-size: 1.7em;
+    }
+
+    .header .header-inner .header-name h5 {
+        font-size: 0.7em;
+    }
+
+    .studying .studying-inner .studying-code {
+        padding: 2em 0 1em;
+    }
+
+    .footer .footer-inner ul {
+        font-size: 0.7em;
+    }
 }
