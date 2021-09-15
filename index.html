@@ -17,21 +17,35 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           crossorigin="anonymous"/>
 
     <title>Yuliya Ivanova CV</title>
 </head>
 <body>
+
+<!-- Burger Menu -->
+<div class="burger-menu">
+    <input id="menu__toggle" type="checkbox"/>
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <ul class="menu__box">
+        <li><a class="menu__item" href="#contacts">Contacts</a></li>
+        <li><a class="menu__item" href="#about">Languages</a></li>
+        <li><a class="menu__item" href="#experience">Skills</a></li>
+        <li><a class="menu__item" href="#studying">Education</a></li>
+    </ul>
+</div>
+
 <!-- Header -->
 <header class="header">
     <div class="container">
         <div class="row header-inner">
-            <div class="col-md-4 header-avatar">
-                <img src="assets/img/avatar_Yuliya.jpg" alt="Yuliya Ivanova" width="300" height="300">
+            <div class="col-6 col-lg-4 col-md-4 header-avatar">
+                <img src="assets/img/avatar_Yuliya.jpg" alt="Yuliya Ivanova" width="100%" height="auto">
             </div>
-            <div class="col-md-8 header-name">
+            <div class="col-6 col-lg-8 col-md-8 header-name">
                 <h1>Yuliya <span>Ivanova</span></h1>
                 <h5>JavaScript Developer</h5>
             </div>
@@ -41,14 +55,34 @@
 
 <!-- Contacts -->
 <section class="contacts">
-    <div class="container">
+    <div id="contacts" class="container">
         <div class="row contacts-inner">
             <div class="col-md-12 contacts-items">
                 <ul>
-                    <li><a href="tel:48538317093">+48 538 317 093</a></li>
-                    <li><a href="mailto:artyulian@gmail.com" target="_blank">artyulian@gmail.com</a></li>
-                    <li><a href="https://t.me/liantras" target="_blank">Telegram</a></li>
-                    <li><a href="https://www.linkedin.com/in/yuliana-ivanova/" target="_blank">LinkedIn</a></li>
+                    <li>
+                        <a href="tel:48538317093">
+                            <span>+48 538 317 093</span>
+                            <i class="fas fa-2x fa-phone-square-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:artyulian@gmail.com" target="_blank">
+                            <span>artyulian@gmail.com</span>
+                            <i class="fas fa-2x fa-envelope-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://t.me/liantras" target="_blank">
+                            <span>Telegram</span>
+                            <i class="fab fa-2x fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/yuliana-ivanova/" target="_blank">
+                            <span>LinkedIn</span>
+                            <i class="fab fa-2x fa-linkedin"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -56,17 +90,17 @@
 </section>
 
 <!-- Languages & About -->
-<section class="about">
+<section id="about" class="about">
     <div class="container">
         <div class="row about-inner">
-            <div class="col-md-4 about-languages">
+            <div class="col-lg-4 col-md-4 about-languages">
                 <h4>Languages</h4>
                 <ul>
                     <li>English B1</li>
                     <li>Russian C2</li>
                 </ul>
             </div>
-            <div class="col-md-8 about-profile">
+            <div class="col-lg-8 col-md-8 about-profile">
                 <h4>Profile</h4>
                 <p>I have been in IT for over 6 years, and for more than 1.5 years I’ve been doing layout for commerce.
                     Programming is my passion, and I plan to grow up to a senior developer position within a few
@@ -77,10 +111,10 @@
 </section>
 
 <!-- Skills & Work -->
-<section class="experience">
+<section id="experience" class="experience">
     <div class="container">
         <div class="row experience-inner">
-            <div class="col-md-4 experience-skills">
+            <div class="col-lg-4 col-md-4 experience-skills">
                 <h4>Skills</h4>
                 <ul>
                     <li>HTML/CSS (Bootstrap, Flexbox)</li>
@@ -89,7 +123,7 @@
                     <li>Git</li>
                 </ul>
             </div>
-            <div class="col-md-8 experience-work">
+            <div class="col-lg-8 col-md-8 experience-work">
                 <h4>Work Experience</h4>
                 <ul>
                     <li>The first site I created <a href="https://sarmontstudio.by/" target="_blank">Sarmont Studio</a>
@@ -105,10 +139,10 @@
 </section>
 
 <!-- Education & Code Example -->
-<section class="studying">
+<section id="studying" class="studying">
     <div class="container">
         <div class="row studying-inner">
-            <div class="col-md-4 studying-education">
+            <div class="col-lg-4 col-md-4 studying-education">
                 <h4>Education</h4>
                 <ul>
                     <li><a href="https://en.gstu.by/">SSTU of Gomel</a>, Economics and Humanities Faculty</li>
@@ -117,7 +151,7 @@
                             End Dev</a> by <a href="https://teachmeskills.by/">TeachMeSkills</a></li>
                 </ul>
             </div>
-            <div class="col-md-8 studying-code">
+            <div class="col-lg-8 col-md-8 studying-code">
                 <h4>Code Example</h4>
                 <pre>
                     <code>
