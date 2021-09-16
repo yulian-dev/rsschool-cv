@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/styles/style.css"/>
+    <link rel="stylesheet" href="assets/styles/reset.css"/>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          crossorigin="anonymous"/>
+
+    <title>Yuliya Ivanova CV</title>
+</head>
+<body>
+
+<!-- Burger Menu -->
+<div class="burger-menu">
+    <input id="menu__toggle" type="checkbox"/>
+    <label class="menu__btn" for="menu__toggle">
+        <span></span>
+    </label>
+    <ul class="menu__box">
+        <li><a class="menu__item" href="#contacts">Contacts</a></li>
+        <li><a class="menu__item" href="#about">Languages</a></li>
+        <li><a class="menu__item" href="#experience">Skills</a></li>
+        <li><a class="menu__item" href="#studying">Education</a></li>
+    </ul>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="row header-inner">
+            <div class="col-6 col-lg-4 col-md-4 header-avatar">
+                <img src="assets/img/avatar_Yuliya.jpg" alt="Yuliya Ivanova" width="100%" height="auto">
+            </div>
+            <div class="col-6 col-lg-8 col-md-8 header-name">
+                <h1>Yuliya <span>Ivanova</span></h1>
+                <h5>JavaScript Developer</h5>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Contacts -->
+<section class="contacts">
+    <div id="contacts" class="container">
+        <div class="row contacts-inner">
+            <div class="col-md-12 contacts-items">
+                <ul>
+                    <li>
+                        <a href="tel:48538317093">
+                            <span>+48 538 317 093</span>
+                            <i class="fas fa-2x fa-phone-square-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:artyulian@gmail.com" target="_blank">
+                            <span>artyulian@gmail.com</span>
+                            <i class="fas fa-2x fa-envelope-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://t.me/liantras" target="_blank">
+                            <span>Telegram</span>
+                            <i class="fab fa-2x fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/yuliana-ivanova/" target="_blank">
+                            <span>LinkedIn</span>
+                            <i class="fab fa-2x fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Languages & About -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="row about-inner">
+            <div class="col-lg-4 col-md-4 about-languages">
+                <h4>Languages</h4>
+                <ul>
+                    <li>English B1</li>
+                    <li>Russian C2</li>
+                </ul>
+            </div>
+            <div class="col-lg-8 col-md-8 about-profile">
+                <h4>Profile</h4>
+                <p>I have been in IT for over 6 years, and for more than 1.5 years I’ve been doing layout for commerce.
+                    Programming is my passion, and I plan to grow up to a senior developer position within a few
+                    years.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills & Work -->
+<section id="experience" class="experience">
+    <div class="container">
+        <div class="row experience-inner">
+            <div class="col-lg-4 col-md-4 experience-skills">
+                <h4>Skills</h4>
+                <ul>
+                    <li>HTML/CSS (Bootstrap, Flexbox)</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+            <div class="col-lg-8 col-md-8 experience-work">
+                <h4>Work Experience</h4>
+                <ul>
+                    <li>The first site I created <a href="https://sarmontstudio.by/" target="_blank">Sarmont Studio</a>
+                        and several layout projects on Bootstrap and Flexbox:
+                    </li>
+                    <li><a href="https://www.kalindait.com/" target="_blank">Kalinda IT</a> (Australia)</li>
+                    <li><a href="https://www.dickersondigital.com/" target="_blank">Dickerson Digital</a></li>
+                    <li><a href="https://gambarra.com/" target="_blank">Gambarra</a> (Australia)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education & Code Example -->
+<section id="studying" class="studying">
+    <div class="container">
+        <div class="row studying-inner">
+            <div class="col-lg-4 col-md-4 studying-education">
+                <h4>Education</h4>
+                <ul>
+                    <li><a href="https://en.gstu.by/">SSTU of Gomel</a>, Economics and Humanities Faculty</li>
+                    <li>
+                        <a href="https://www.linkedin.com/posts/yuliana-ivanova_teachmeskills-frontend-activity-6798999717515792384-uEl2/">Front
+                            End Dev</a> by <a href="https://teachmeskills.by/">TeachMeSkills</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-8 col-md-8 studying-code">
+                <h4>Code Example</h4>
+                <pre>
+                    <code>
+const addEventListenersToRemoveButtons = () => {
+    let removeButtons = document.getElementsByClassName('todo-remove');
+    for (let button of removeButtons) {
+        if (!button.getAttribute('data-event-click')) {
+            button.addEventListener('click', () => {
+                let id = button.parentElement.getAttribute('data-id');
+                let todo = document.querySelector(`[data-id='${id}']`);
+                todo.remove();
+            });
+            button.setAttribute('data-event-click', 'true');
+        }
+    }
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row footer-inner">
+            <div class="col-md-12 footer-items">
+                <ul>
+                    <li>© 2021</li>
+                    <li><a href="https://github.com/yulian-dev" target="_blank">GitHub</a></li>
+                    <li><a href="https://rs.school/js/" target="_blank">
+                        <img src="assets/img/icons/rsschool_logo.svg" width="73" height="26"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
